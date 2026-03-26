@@ -36,10 +36,10 @@ class StudentManager{
             System.out.println("No Student avaliable");
             return;
         }
-        System.out.println("Name | Registration Number | Marks");
+        System.out.printf("%-10s | %-20s | %-5s%n", "Name", "Registration Number", "Marks");
         StudentNode temp = head;
         while (temp != null) {
-            System.out.println(temp.name + " | " + temp.RegNum + " | " + temp.Marks);
+            System.out.printf("%-10s | %-20d | %-5d\n", temp.name, temp.RegNum, temp.Marks);
             temp = temp.next;
         }
     }
