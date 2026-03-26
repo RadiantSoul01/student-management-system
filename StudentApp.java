@@ -17,6 +17,7 @@ class StudentApp{
             System.out.println("1 : for adding student data");
             System.out.println("2: for finding student's data");
             System.out.println("3: for all the student's data");
+            System.out.println("4: for deleting student's record");
             System.out.println("8: for exit");
 
 
@@ -43,7 +44,9 @@ class StudentApp{
                 case 3:
                     id.getAll(head);
                     break;
-
+                case 4:
+                    head = id.remove(head);
+                    break;
                 default:
                     System.out.println("please enter the correct choice!!");
                     break;
