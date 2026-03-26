@@ -11,14 +11,15 @@ class StudentApp{
         int size = 0;
 
 
-        System.out.println("Welcome to the Student Data management system");
+        System.out.println("\n===== Student Management System =====");
 
         do{
-            System.out.println("1 : for adding student data");
-            System.out.println("2: for finding student's data");
-            System.out.println("3: for all the student's data");
-            System.out.println("4: for deleting student's record");
-            System.out.println("8: for exit");
+            System.out.println("1. Add Student");
+            System.out.println("2. Find Student");
+            System.out.println("3. Display All Students");
+            System.out.println("4. Delete Student");
+            System.out.println("8. Exit");
+            System.out.print("Enter your choice: ");
 
 
             n = Integer.parseInt(sc.nextLine());
