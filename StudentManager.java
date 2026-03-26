@@ -2,7 +2,7 @@ class StudentManager{
     InputHandler get = new InputHandler();
 
     public StudentNode add(){
-
+        //adding new student info
         String name = get.getName();
         int marks = get.getMark();
         int regNum = get.getRegNum();
@@ -13,7 +13,7 @@ class StudentManager{
     }
 
     public void find(StudentNode head){
-
+        //finding student info
         if(head == null){
             System.out.println("No Student avaliable");
             return;
@@ -31,6 +31,7 @@ class StudentManager{
     }
 
     public void getAll(StudentNode head){
+        //displaying student info
         if(head == null){
             System.out.println("No Student avaliable");
             return;
@@ -41,5 +42,37 @@ class StudentManager{
             System.out.println(temp.name + " | " + temp.RegNum + " | " + temp.Marks);
             temp = temp.next;
         }
+    }
+
+    public StudentNode remove(StudentNode head){
+        //deleting student info
+        if(head == null){
+            System.out.println("No Student Available");
+            return head;
+        }
+    
+        int reg = get.getRegNum();
+    
+        // Case 1: head needs to be deleted
+        if(head.RegNum == reg){
+            System.out.println("Student info Deleted successfully");
+            return head.next;
+        }
+    
+        StudentNode prev = head;
+        StudentNode curr = head.next;
+    
+        while(curr != null){
+            if(curr.RegNum == reg){
+                prev.next = curr.next;
+                System.out.println("Student info Deleted successfully");
+                return head;
+            }
+            prev = curr;
+            curr = curr.next;
+        }
+    
+        System.out.println("Student Not Found!!");
+        return head;
     }
 }
