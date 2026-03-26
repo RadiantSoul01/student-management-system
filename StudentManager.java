@@ -13,6 +13,11 @@ class StudentManager{
     }
 
     public void find(StudentNode head){
+
+        if(head == null){
+            System.out.println("No Student avaliable");
+            return;
+        }
         int reg = get.getRegNum();
         StudentNode temp = head;
         while(temp != null){
@@ -23,14 +28,17 @@ class StudentManager{
             temp = temp.next;
         }
         System.out.println("Not found!!");
-        return;
     }
 
     public void getAll(StudentNode head){
-        System.out.println("    Name    :   registration Number    :   Marks   ");
+        if(head == null){
+            System.out.println("No Student avaliable");
+            return;
+        }
+        System.out.println("Name | Registration Number | Marks");
         StudentNode temp = head;
-        while(temp != null){
-            System.out.println("    " +  temp.name + "            " + temp.RegNum + "                    " + temp.Marks);
+        while (temp != null) {
+            System.out.println(temp.name + " | " + temp.RegNum + " | " + temp.Marks);
             temp = temp.next;
         }
     }
