@@ -3,17 +3,17 @@ class InputHandler{
     Scanner sc = new Scanner(System.in);
 
     public int getMark(){
-        System.out.println("Enter the marks:");
+        System.out.print("Enter the marks:");
         return Integer.parseInt(sc.nextLine());
     }
 
     public String getName(){
-        System.out.println("Enter name:");
+        System.out.print("Enter name:");
         return sc.nextLine();
     }
     
     public int getRegNum(){
-        System.out.println("Enter the reg number:");
+        System.out.print("Enter the reg number:");
         return Integer.parseInt(sc.nextLine());
     }
 
